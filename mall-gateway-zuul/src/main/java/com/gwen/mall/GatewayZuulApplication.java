@@ -8,10 +8,7 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 /**
  * Description：
- * Created with IntelliJ IDEA
  * Created By guowen
- * Date: 2020/3/28
- * Time: 23:00
  */
 
 /**@SpringCloudApplication

@@ -5,10 +5,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * Description：
- * Created with IntelliJ IDEA
  * Created By guowen
- * Date: 2020/3/28
- * Time: 22:09
  */
 @Component
 public class DemoServiceHystrix implements DemoService {

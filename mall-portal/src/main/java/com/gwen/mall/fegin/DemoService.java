@@ -8,10 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Description：
- * Created with IntelliJ IDEA
  * Created By guowen
- * Date: 2020/3/28
- * Time: 20:49
  */
 // value=调用服务名字
 // fallback 不能使用fallbackFactory
