@@ -8,3 +8,36 @@ eureka:
     fetchRegistry: false #表示是否从Eureka Server获取注册信息
 serviceUrl:
   defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #单机配置
+
+#
+#  映射hosts 模拟域名解析 C:\Windows\System32\drivers\etc
+#  127.0.0.1       eureka-1.com
+#  127.0.0.1       eureka-2.com
+#  创建eureka_1 ，与eureka_2一样
+#  配置yml
+#  项目的application.yml
+#server:
+#  port: 7001
+#  eureka:
+#    instance:
+#      hostname: eureka-1.com
+#    client:
+#      registerWithEureka: false #是否要注册到eureka
+#      fetchRegistry: false #表示是否从Eureka Server获取注册信息
+#      serviceUrl:
+#        #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #单机配置
+#        defaultZone: http://eureka-2.com:7002/eureka/ #集群配置,如果有多个,有逗号分割,不要包含自己
+#
+#  7002项目的application.yml
+#server:
+#  port: 7002
+#eureka:
+#  instance:
+#    hostname: eureka-2.com
+#  client:
+#    registerWithEureka: false #是否要注册到eureka
+#    fetchRegistry: false #表示是否从Eureka Server获取注册信息
+#    serviceUrl:
+#      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #单机配置
+#      defaultZone: http://eureka-1.com:7001/eureka/ #集群配置,如果有多个,有逗号分割,不要包含自己
+
