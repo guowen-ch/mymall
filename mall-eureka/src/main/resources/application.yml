@@ -1,5 +1,11 @@
 server:
   port: 8761
+
+# 此处必须设置 true 不然通过zuul 调用报错：
+# Load balancer does not have available server for client: mall-portal
+ribbon:
+  eureka:
+    enabled: true
 eureka:
   instance:
     hostname: localhost
