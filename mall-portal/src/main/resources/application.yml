@@ -4,8 +4,8 @@ server:
 #        max-threads: 1000
 #        min-spare-threads: 30
   port: 8090
-  servlet:
-    context-path: /mall-portal
+#  servlet:
+#    context-path: /mall-portal
 #    uri-encoding: utf-8
 #security:
 #  basic:
