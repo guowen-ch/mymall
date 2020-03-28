@@ -8,10 +8,7 @@ import java.util.List;
 
 /**
  * Description：
- * Created with IntelliJ IDEA
  * Created By guowen
- * Date: 2020/3/28
- * Time: 17:21
  */
 @RestController
 @RequestMapping("/sys/user")
