@@ -1,25 +1,61 @@
 package com.gwen.mall.dto;
 
-public class User {
-    private String id;
+import java.io.Serializable;
+import java.util.Date;
+
+public class User implements Serializable {
+    private static final long serialVersionUID = 4125096758372084309L;
+    private Long userId;
+
+    private String userName;
 
     private String name;
 
-    public User(String id, String name) {
-        this.id = id;
+    private String password;
+
+    private Byte status;
+
+    private String createBy;
+
+    private Date createDate;
+
+    private String updateBy;
+
+    private Date updateDate;
+
+    private String desc;
+
+    public User(Long userId, String userName, String name, String password, Byte status, String createBy, Date createDate, String updateBy, Date updateDate, String desc) {
+        this.userId = userId;
+        this.userName = userName;
         this.name = name;
+        this.password = password;
+        this.status = status;
+        this.createBy = createBy;
+        this.createDate = createDate;
+        this.updateBy = updateBy;
+        this.updateDate = updateDate;
+        this.desc = desc;
     }
 
     public User() {
         super();
     }
 
-    public String getId() {
-        return id;
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setId(String id) {
-        this.id = id == null ? null : id.trim();
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName == null ? null : userName.trim();
     }
 
     public String getName() {
@@ -28,5 +64,61 @@ public class User {
 
     public void setName(String name) {
         this.name = name == null ? null : name.trim();
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password == null ? null : password.trim();
+    }
+
+    public Byte getStatus() {
+        return status;
+    }
+
+    public void setStatus(Byte status) {
+        this.status = status;
+    }
+
+    public String getCreateBy() {
+        return createBy;
+    }
+
+    public void setCreateBy(String createBy) {
+        this.createBy = createBy == null ? null : createBy.trim();
+    }
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
+    }
+
+    public String getUpdateBy() {
+        return updateBy;
+    }
+
+    public void setUpdateBy(String updateBy) {
+        this.updateBy = updateBy == null ? null : updateBy.trim();
+    }
+
+    public Date getUpdateDate() {
+        return updateDate;
+    }
+
+    public void setUpdateDate(Date updateDate) {
+        this.updateDate = updateDate;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc == null ? null : desc.trim();
     }
 }
