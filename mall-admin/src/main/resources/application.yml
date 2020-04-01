@@ -23,10 +23,7 @@ spring:
       max-file-size: 30
       max-request-size: 30
   cache:
-    type: ehcache
-    ehcache:
-      config: classpath:config/ehcache.xml
-
+    type: redis
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
