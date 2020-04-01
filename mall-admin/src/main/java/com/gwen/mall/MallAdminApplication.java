@@ -3,6 +3,7 @@ package com.gwen.mall;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
@@ -16,6 +17,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * 如果是其他的注册中心，那么推荐使用@EnableDiscoveryClient。
  */
 @EnableEurekaClient
+@EnableCaching  //来开启缓存
 public class MallAdminApplication {
 
     public static void main(String[] args) {

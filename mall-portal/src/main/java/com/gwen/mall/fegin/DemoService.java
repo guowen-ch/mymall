@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(value = "mall-admin",fallback = DemoServiceHystrix.class)
 public interface DemoService {
     // 注意mall-admin模块的路径 server.servlet.context-path:/mall-admin
+    //当参数没有被 @RequestParam 注解修饰时，会自动被当做 request body 来处理。只要有 body，就会被 Feign 认为是 POST 请求.考虑版本
     @GetMapping("/mall-admin/sys/user/get")
-    String getUser(@RequestParam("id") String id);
+    Object getUser(@RequestParam("id") String id);
 }

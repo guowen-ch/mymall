@@ -1,6 +1,7 @@
 package com.gwen.mall.service.impl;
 
 import com.gwen.mall.dao.UserMapper;
+import com.gwen.mall.dto.User;
 import com.gwen.mall.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +16,7 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
     @Autowired
     UserMapper mapper;
-    public void get(){
-        System.out.println(mapper.selectByPrimaryKey("1"));
+    public User get(){
+        return mapper.selectByPrimaryKey(1L);
     }
 }

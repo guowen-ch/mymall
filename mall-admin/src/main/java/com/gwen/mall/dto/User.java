@@ -23,9 +23,9 @@ public class User implements Serializable {
 
     private Date updateDate;
 
-    private String desc;
+    private String remark;
 
-    public User(Long userId, String userName, String name, String password, Byte status, String createBy, Date createDate, String updateBy, Date updateDate, String desc) {
+    public User(Long userId, String userName, String name, String password, Byte status, String createBy, Date createDate, String updateBy, Date updateDate, String remark) {
         this.userId = userId;
         this.userName = userName;
         this.name = name;
@@ -35,7 +35,7 @@ public class User implements Serializable {
         this.createDate = createDate;
         this.updateBy = updateBy;
         this.updateDate = updateDate;
-        this.desc = desc;
+        this.remark = remark;
     }
 
     public User() {
@@ -114,11 +114,11 @@ public class User implements Serializable {
         this.updateDate = updateDate;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getremark() {
+        return remark;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc == null ? null : desc.trim();
+    public void setremark(String remark) {
+        this.remark = remark == null ? null : remark.trim();
     }
 }

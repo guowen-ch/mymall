@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class DemoServiceHystrix implements DemoService {
     @Override
-    public String getUser(String id) {
+    public Object getUser(String id) {
         System.out.println("调用失败");
         return "调用失败";
     }

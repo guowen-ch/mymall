@@ -1,19 +1,19 @@
 package com.gwen.mall.dao;
 
 import com.gwen.mall.dto.User;
-import org.springframework.stereotype.Repository;
 
-@Repository
 public interface UserMapper {
-    int deleteByPrimaryKey(String id);
+    int deleteByPrimaryKey(Long userId);
 
     int insert(User record);
 
     int insertSelective(User record);
 
-    User selectByPrimaryKey(String id);
+    User selectByPrimaryKey(Long userId);
 
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+
+    User selectByUserIdAndPass(String userName,String password);
 }

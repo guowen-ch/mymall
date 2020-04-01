@@ -1,5 +1,6 @@
 package com.gwen.mall.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.gwen.mall.fegin.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +18,7 @@ public class DemoController {
     private DemoService service;
     @RequestMapping("/hello")
     public String index(@RequestParam String name) {
-        service.getUser(name);
-        return "hello "+name+"，this is first messge";
+        Object o = service.getUser(name);
+        return "hello "+name+"，this is first messge"+ JSONObject.toJSONString(o);
     }
 }
